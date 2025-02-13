@@ -1,20 +1,20 @@
 import * as stylex from '@stylexjs/stylex';
-import { tokens as t } from './tokens.stylex';
+import { fonts as t } from '@stylexjs/open-props/lib/fonts.stylex';
 
 import { type ReactNode } from 'react';
 
 const styles = stylex.create({
   text: {
-    color: t.blue9,
+    color: 'hotpink',
   },
 });
 
 const variants = stylex.create({
   small: {
-    fontSize: t.fontSize0
+    fontSize: t.size1
   },
   big: {
-    fontSize: t.fontSize1
+    fontSize: t.size7
   }
 })
 
@@ -23,6 +23,6 @@ export interface TextProps {
   size: keyof typeof variants;
 }
 
-export function Text({ children, size: t }: TextProps) {
+export function Text2({ children, size: t }: TextProps) {
   return <div {...stylex.props(styles.text, variants[t])}>{children}</div>;
 }

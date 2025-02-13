@@ -7,6 +7,7 @@ import { tokens } from '@stylexswc/design-system/tokens.stylex';
 import { Text } from '@stylexswc/design-system';
 import { sizes } from '@stylexjs/open-props/lib/sizes.stylex';
 import { fonts } from '@stylexjs/open-props/lib/fonts.stylex';
+import { Text2} from '@/components/Text2'
 
 const HOMEPAGE = 'https://stylexjs.com';
 
@@ -27,7 +28,8 @@ export default function Home(_props: Props) {
         <Counter />
       </div>
       <div {...stylex.props(style.card, style.pinkBg)}>
-        <Text>Pink rounded rectangle with blue text</Text>
+        <Text size='small'>Pink rounded rectangle with blue text</Text>
+        <Text2 size='big'>Large</Text2>
       </div>
 
       <div {...stylex.props(style.grid)}>
